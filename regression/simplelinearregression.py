@@ -67,9 +67,6 @@ plt.legend()
 plt.grid(True)
 plt.show()
 
-
-
-# --- Predict from user input ---
 try:
     input_value = float(input("Enter average number of rooms: "))
     input_df = pd.DataFrame([[input_value]], columns=["AveRooms"])  # Match the training column name
