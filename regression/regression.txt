@@ -155,3 +155,48 @@ model.fit(X, y)
 ​
 y_pred = model.predict(X_new)
 Note: This code demonstrates the basic workflow of creating, training, and utilizing a Support vector regression model for predictive modeling tasks.
+
+7. Ridge Regression
+Ridge regression is a technique for analyzing multiple regression data. When multicollinearity occurs, least squares estimates are unbiased. This is a regularized linear regression model, it tries to reduce the model complexity by adding a penalty term to the cost function. A degree of bias is added to the regression estimates, and as a result, ridge regression reduces the standard errors.
+
+Cost
+=
+argmin
+β
+∈
+R
+∥
+i
+−
+X
+β
+∥
+2
++
+λ
+∥
+β
+∥
+2
+Cost= 
+β∈R
+argmin
+​
+ ∥i−Xβ∥ 
+2
+ +λ∥β∥ 
+2
+ 
+
+Here is the code for simple demonstration of the Ridge regression approach.
+
+
+
+
+from sklearn.linear_model import Ridge
+​
+model = Ridge(alpha=0.1)
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Ridge regression model for predictive modeling tasks.
