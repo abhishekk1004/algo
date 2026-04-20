@@ -1,0 +1,38 @@
+Regression Analysis is a fundamental concept in machine learning used to model relationships between dependent and independent variables. Various regression techniques are tailored to different data structures and objectives. Below is an exploration of key regression techniques, their significance, and practical examples.
+
+Types of Regression Techniques
+Linear Regression
+Polynomial Regression
+Stepwise Regression
+Decision Tree Regression
+Random Forest Regression
+Support Vector Regression
+Ridge Regression
+Lasso Regression
+ElasticNet Regression
+Bayesian Linear Regression
+1. Linear Regression
+Linear regression is used for predictive analysis. Linear regression is a linear approach for modeling the relationship between the criterion or the scalar response and the multiple predictors or explanatory variables. Linear regression focuses on the conditional probability distribution of the response given the values of the predictors. For linear regression, there is a danger of overfitting. The formula for linear regression is:
+
+Syntax:
+
+y = θx + b
+
+where,
+
+θ - It is the model weights or parameters
+b - It is known as the bias.
+This is the most basic form of regression analysis and is used to model a linear relationship between a single dependent variable and one or more independent variables.
+
+Here, a linear regression model is instantiated to fit a linear relationship between input features (X) and target values (y). This code is used for simple demonstration of the approach.
+
+
+
+
+from sklearn.linear_model import LinearRegression
+​
+model = LinearRegression()
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a linear regression model for predictive modeling tasks.
