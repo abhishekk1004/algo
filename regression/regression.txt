@@ -36,3 +36,122 @@ model.fit(X, y)
 ​
 y_pred = model.predict(X_new)
 Note: This code demonstrates the basic workflow of creating, training, and utilizing a linear regression model for predictive modeling tasks.
+
+2. Polynomial Regression
+This is an extension of linear regression and is used to model a non-linear relationship between the dependent variable and independent variables. Here as well syntax remains the same but now in the input variables we include some polynomial or higher degree terms of some already existing features as well. Linear regression was only able to fit a linear model to the data at hand but with polynomial features, we can easily fit some non-linear relationship between the target as well as input features.
+
+Here is the code for simple demonstration of the Polynomial regression approach.
+
+
+
+
+from sklearn.linear_model import PolynomialRegression
+​
+model = PolynomialRegression(degree=2)
+​
+model.fit(X, y)
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Polynomial regression model for predictive modeling tasks.
+
+3. Stepwise Regression
+Stepwise regression is used for fitting regression models with predictive models. It is carried out automatically. With each step, the variable is added or subtracted from the set of explanatory variables. The approaches for stepwise regression are forward selection, backward elimination, and bidirectional elimination. The formula for stepwise regression is
+
+ 
+b
+j
+.
+s
+t
+d
+=
+b
+j
+(
+s
+x
+s
+y
+−
+1
+)
+    
+b 
+j.std
+​
+ =b 
+j
+​
+ (s 
+x
+​
+ s 
+y
+−1
+​
+ )    
+
+Here is the code for simple demonstration of the stepwise regression approach.
+
+
+
+
+from sklearn.linear_model import StepwiseLinearRegression
+​
+model = StepwiseLinearRegression(forward=True,backward=True,
+                                 verbose=1)
+​
+model.fit(X, y)
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Stepwise regression model for predictive modeling tasks.
+
+4. Decision Tree Regression
+A Decision Tree is the most powerful and popular tool for classification and prediction. A Decision tree is a flowchart-like tree structure, where each internal node denotes a test on an attribute, each branch represents an outcome of the test, and each leaf node (terminal node) holds a class label. There is a non-parametric method used to model a decision tree to predict a continuous outcome.
+
+Here is the code for simple demonstration of the Decision Tree regression approach.
+
+
+
+
+from sklearn.tree import DecisionTreeRegressor
+​
+model = DecisionTreeRegressor()
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Decision Tree regression model for predictive modeling tasks.
+
+5. Random Forest Regression
+Random Forest is an ensemble technique capable of performing both regression and classification tasks with the use of multiple decision trees and a technique called Bootstrap and Aggregation, commonly known as bagging. The basic idea behind this is to combine multiple decision trees in determining the final output rather than relying on individual decision trees. 
+
+Random Forest has multiple decision trees as base learning models. We randomly perform row sampling and feature sampling from the dataset forming sample datasets for every model. This part is called Bootstrap.
+
+Here is the code for simple demonstration of the Random Forest regression approach.
+
+
+
+
+from sklearn.ensemble import RandomForestRegressor
+​
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Random Forest regression model for predictive modeling tasks.
+
+6. Support Vector Regression (SVR)
+Support vector regression (SVR) is a type of support vector machine (SVM) that is used for regression tasks. It tries to find a function that best predicts the continuous output value for a given input value.
+
+SVR can use both linear and non-linear kernels. A linear kernel is a simple dot product between two input vectors, while a non-linear kernel is a more complex function that can capture more intricate patterns in the data. The choice of kernel depends on the data’s characteristics and the task’s complexity.
+
+Here is the code for simple demonstration of the Support vector regression approach.
+
+
+
+
+from sklearn.svm import SVR
+​
+model = SVR(kernel='linear')
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Support vector regression model for predictive modeling tasks.
