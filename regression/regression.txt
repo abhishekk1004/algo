@@ -362,3 +362,12 @@ model = SVR(kernel='linear')
 model.fit(X, y)
 
 y_pred = model.predict(X_new)
+
+Cost= 
+β∈R
+argmin
+​
+ ∥i−Xβ∥ 
+2
+ +λ∥β∥ 
+2
