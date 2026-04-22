@@ -371,3 +371,10 @@ argmin
 2
  +λ∥β∥ 
 2
+
+from sklearn.linear_model import Lasso
+
+model = Lasso(alpha=0.1)
+model.fit(X, y)
+
+y_pred = model.predict(X_new)
