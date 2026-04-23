@@ -200,3 +200,21 @@ model.fit(X, y)
 ​
 y_pred = model.predict(X_new)
 Note: This code demonstrates the basic workflow of creating, training, and utilizing a Ridge regression model for predictive modeling tasks.
+
+8. Lasso Regression
+Lasso regression is a regression analysis method that performs both variable selection and regularization. Lasso regression uses soft thresholding. Lasso regression selects only a subset of the provided covariates for use in the final model.
+
+This is another regularized linear regression model, it works by adding a penalty term to the cost function, but it tends to zero out some features' coefficients, which makes it useful for feature selection.
+
+Here is the code for simple demonstration of the Lasso regression approach.
+
+
+
+
+from sklearn.linear_model import Lasso
+​
+model = Lasso(alpha=0.1)
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Lasso regression model for predictive modeling tasks.
