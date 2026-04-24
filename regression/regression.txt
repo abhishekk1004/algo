@@ -353,3 +353,12 @@ There are many different ways to calculate regression, but the most common metho
 
 Why use regression?
 Regression is a powerful tool for understanding and predicting relationships between variables. It is used in a wide variety of applications, including finance, economics, marketing, and medicine.
+
+
+examples
+from sklearn.svm import SVR
+
+model = SVR(kernel='linear')
+model.fit(X, y)
+
+y_pred = model.predict(X_new)
