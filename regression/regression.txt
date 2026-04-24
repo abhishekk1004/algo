@@ -218,3 +218,106 @@ model.fit(X, y)
 ​
 y_pred = model.predict(X_new)
 Note: This code demonstrates the basic workflow of creating, training, and utilizing a Lasso regression model for predictive modeling tasks.
+
+9. ElasticNet Regression
+Linear Regression suffers from overfitting and can’t deal with collinear data. When there are many features in the dataset and even some of them are not relevant to the predictive model. This makes the model more complex with a too-inaccurate prediction on the test set (or overfitting). Such a model with high variance does not generalize on the new data. So, to deal with these issues, we include both L-2 and L-1 norm regularization to get the benefits of both Ridge and Lasso at the same time. The resultant model has better predictive power than Lasso. It performs feature selection and also makes the hypothesis simpler. The modified cost function for Elastic-Net Regression is given below:
+
+1
+m
+[
+∑
+l
+=
+1
+m
+(
+y
+(
+i
+)
+−
+h
+(
+x
+(
+i
+)
+)
+)
+2
++
+λ
+1
+∑
+j
+=
+1
+n
+w
+j
++
+λ
+2
+∑
+j
+=
+1
+n
+w
+j
+2
+]
+m
+1
+​
+ [∑ 
+l=1
+m
+​
+ (y 
+(i)
+ −h(x 
+(i)
+ )) 
+2
+ +λ 
+1
+​
+ ∑ 
+j=1
+n
+​
+ w 
+j
+​
+ +λ 
+2
+​
+ ∑ 
+j=1
+n
+​
+ w 
+j
+2
+​
+ ]
+
+where,
+
+w(j) represents the weight for the jth feature.  
+n is the number of features in the dataset.
+lambda1 is the regularization strength for the L1 norm.
+lambda2 is the regularization strength for the L2 norm.
+Here is the code for simple demonstration of the Elasticnet regression approach.
+
+
+
+
+from sklearn.linear_model import ElasticNet
+​
+model = ElasticNet(alpha=0.1, l1_ratio=0.5)
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Elastic Net regression model for predictive modeling tasks.
