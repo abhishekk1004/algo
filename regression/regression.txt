@@ -321,3 +321,35 @@ model.fit(X, y)
 ​
 y_pred = model.predict(X_new)
 Note: This code demonstrates the basic workflow of creating, training, and utilizing a Elastic Net regression model for predictive modeling tasks.
+
+10. Bayesian Linear Regression
+As the name suggests this algorithm is purely based on Bayes Theorem. Because of this reason only we do not use the Least Square method to determine the coefficients of the regression model. So, the technique which is used here to find the model weights and parameters relies on features posterior distribution and this provides an extra stability factor to the regression model which is based on this technique.
+
+Here is the code for simple demonstration of the Bayesian Linear regression approach.
+
+
+
+
+from sklearn.linear_model import BayesianLinearRegression
+​
+model = BayesianLinearRegression()
+model.fit(X, y)
+​
+y_pred = model.predict(X_new)
+Note: This code demonstrates the basic workflow of creating, training, and utilizing a Bayesian linear regression model for predictive modeling tasks.
+
+Types of Regression Techniques in ML - FAQs
+What are the 2 main types of regression?
+The two main types of regression are linear regression and logistic regression. Linear regression is used to predict a continuous numerical outcome, while logistic regression is used to predict a binary categorical outcome (e.g., yes or no, pass or fail).
+
+What are the two types of variables in regression?
+The two types of variables in regression are independent variables and dependent variables. Independent variables are the inputs to the regression model, while the dependent variable is the output that the model is trying to predict.
+
+Why is regression called regression?
+The term "regression" was coined by Sir Francis Galton in the late 19th century. He used the term to describe the phenomenon of children's heights tending to regress towards the mean of the population, meaning that taller-than-average parents tend to have children who are closer to the average height, and shorter-than-average parents tend to have children who are closer to the average height.
+
+How to calculate regression?
+There are many different ways to calculate regression, but the most common method is gradient descent. Gradient descent is an iterative algorithm that updates the parameters of the regression model in the direction that minimizes the error between the predicted and actual values of the dependent variable.
+
+Why use regression?
+Regression is a powerful tool for understanding and predicting relationships between variables. It is used in a wide variety of applications, including finance, economics, marketing, and medicine.
