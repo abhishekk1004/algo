@@ -11,8 +11,7 @@ df = pd.read_csv('/Users/sumanshrestha/Downloads/titanic.csv')
 
 print(df.head())
 
-# Step 3: Preprocess data
-# Select features and target
+
 features = ['pclass', 'sex', 'age', 'fare', 'embarked']
 df = df[features + ['survived']]
 
