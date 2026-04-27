@@ -7,7 +7,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 
-# Load the locally saved Titanic CSV
 df = pd.read_csv('/Users/sumanshrestha/Downloads/titanic.csv')
 
 print(df.head())
