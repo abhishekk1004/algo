@@ -18,7 +18,7 @@ df = df[features + ['survived']]
 
 df = df.dropna()
 
-# Encode categorical features
+
 df['sex'] = df['sex'].map({'male': 0, 'female': 1})
 df['embarked'] = df['embarked'].map({'S': 0, 'C': 1, 'Q': 2})
 
@@ -66,3 +66,4 @@ final_knn.fit(X_final_train_scaled, y_combined)
 y_test_pred = final_knn.predict(X_test_scaled)
 print("\nFinal Test Accuracy:", accuracy_score(y_test, y_test_pred))
 print("\nFinal Classification Report:\n", classification_report(y_test, y_test_pred))
+
