@@ -15,7 +15,7 @@ print(df.head())
 features = ['pclass', 'sex', 'age', 'fare', 'embarked']
 df = df[features + ['survived']]
 
-# Drop rows with missing values
+
 df = df.dropna()
 
 # Encode categorical features
