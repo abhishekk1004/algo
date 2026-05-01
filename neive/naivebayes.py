@@ -7,7 +7,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import StratifiedKFold, train_test_split
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
-# Load data
+
 data_path = Path(__file__).resolve().parent / "SMSSpamCollection"
 df = pd.read_csv(data_path, sep='\t', header=None, names=['label', 'message'])
 df['label'] = df['label'].map({'ham': 0, 'spam': 1})
