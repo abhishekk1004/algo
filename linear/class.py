@@ -6,7 +6,7 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 
-# Load Dataset
+
 data = pd.read_csv("/Users/abhishek/Projects/algorithm/algo/wine.csv")
 
 # Display Dataset
