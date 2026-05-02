@@ -13,8 +13,7 @@ data = pd.read_csv("/Users/abhishek/Projects/algorithm/algo/wine.csv")
 print("First 5 Rows:")
 print(data.head())
 
-# Features and Target
-# Replace 'target' with your target column name if different
+
 
 X = data.drop("target", axis=1)
 y = data["target"]
