@@ -25,5 +25,5 @@ flowchart LR
   D --> E[Forecast & evaluate]
 ```
 
-Notes on images
+Notes on image
 - Add a time series plot and ACF/PACF plots: `images/ts_plots.png`.
