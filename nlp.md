@@ -15,6 +15,7 @@ Key notes
 Quick example (sentiment analysis)
 - Fine-tune a pretrained transformer on labeled sentiment data.
 
+have a look
 Mermaid pipeline
 ```mermaid
 flowchart LR
