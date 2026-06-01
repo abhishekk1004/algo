@@ -8,6 +8,7 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Feature extraction: hand-crafted (SIFT, HOG) vs learned features (CNNs)
 - Convolutional Neural Networks (CNNs): conv, pooling, batch norm, residual blocks
 - Transfer learning and fine-tuning: use pretrained backbones to speed convergence
+ - Activation functions: prefer ReLU (Rectified Linear Unit) over sigmoid/tanh in deep networks — ReLU mitigates the vanishing-gradient problem, produces sparse (and often more robust) activations, is computationally cheap, and typically yields faster convergence. Consider variants like Leaky ReLU or GELU to avoid "dead" ReLU neurons when needed.
 - Data augmentation: flips, rotations, crops, color jitter, MixUp, CutMix
 
 ## Common Tasks
@@ -64,4 +65,5 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 
 ## Notes
 - Add example images to `images/cv_detection_example.png` for demos.
+
 
