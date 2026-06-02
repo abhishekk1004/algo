@@ -63,7 +63,5 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Papers: "Deep Residual Learning for Image Recognition" (ResNet), "Faster R-CNN"; "Vision Transformer"
 - Libraries: [Detectron2](https://github.com/facebookresearch/detectron2), [MMDetection](https://github.com/open-mmlab/mmdetection)
 
-## Notes
-- Add example images to `images/cv_detection_example.png` for demos.
 
 
