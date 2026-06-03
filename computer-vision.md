@@ -63,5 +63,34 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Papers: "Deep Residual Learning for Image Recognition" (ResNet), "Faster R-CNN"; "Vision Transformer"
 - Libraries: [Detectron2](https://github.com/facebookresearch/detectron2), [MMDetection](https://github.com/open-mmlab/mmdetection)
 
+## Additional Topics
+
+- Classical CV & Preprocessing: common low-level ops (color conversion, histogram equalization, edge detectors like Canny, feature descriptors like SIFT/ORB), geometric transforms, camera models and calibration, lens distortion correction, and stereo correspondence.
+- Self-Supervised & Foundation Models: contrastive methods (SimCLR), masked/image-modeling approaches (MAE), and large pretrained vision foundation models that enable few-shot transfer and prompt-style adaptation.
+- Robustness & Safety: adversarial examples and defenses, out-of-distribution detection, uncertainty estimation, dataset shift handling, and evaluating model robustness to corruptions (e.g., ImageNet-C).
+- Explainability & Visualization: saliency maps, Grad-CAM, feature inversion, and tools for qualitative inspection of model attention and failure modes.
+- Data Efficiency & Synthetic Data: active learning, semi-supervised learning, domain adaptation, and using synthetic data (simulators, domain randomization) to augment scarce labels.
+- Annotation & Dataset Best Practices: annotation schemas (COCO, Pascal VOC), labeling quality checks, inter-annotator agreement, bounding-box vs polygon tradeoffs, and efficient labeling workflows/tooling.
+- Metrics & Evaluation (expanded): FID/IS for generative tasks, mAP/IoU variants for detection/segmentation, precision-recall curves, ROC/AUC for binary tasks, per-class breakdowns, and latency/throughput for runtime evaluation.
+- Model Compression & Acceleration: quantization, pruning, knowledge distillation, operator fusion, ONNX export, TensorRT/TVM, and trade-offs between accuracy and latency/size.
+- Deployment Considerations: edge vs cloud inference, batching strategies, memory/IO constraints, pipeline orchestration (pre/post-processing), monitoring, A/B testing, and model versioning.
+- Hardware & Benchmarking: GPU/TPU profiling, mixed-precision training (FP16/AMP), CPU vectorization, and benchmarking for latency, throughput, and power consumption.
+- Reproducibility & Experimentation: seed control, deterministic ops, experiment tracking (Weights & Biases, MLflow), and writing reproducible training scripts and configs.
+- Ethics, Privacy & Legal: dataset licenses and consent, privacy-preserving techniques (blurring/facial anonymization), and bias audits for fairness in CV systems.
+
+## Quick Additions — Practical Tips (compact)
+
+- Prefer short validation cycles with representative holdouts; monitor per-class metrics.
+- Log visual samples (TP/FP/FN) each epoch for qualitative checks.
+- When fine-tuning, start with lower LR for pretrained backbone and higher LR for newly initialized heads.
+- Use mixed-precision and gradient accumulation to scale batch size when memory-limited.
+
+## More Resources
+- Libraries: OpenCV for fundamental CV ops and visualization; ONNX, TensorRT, TVM for runtime optimization.
+- Benchmarks & Tools: ImageNet, COCO, Roboflow, Open Images, and robustness suites like ImageNet-C.
+
+---
+Updates added to provide broader coverage of real-world CV topics: robustness, deployment, compression, reproducibility, and data efficiency.
+
 
 
