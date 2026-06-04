@@ -89,8 +89,6 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Libraries: OpenCV for fundamental CV ops and visualization; ONNX, TensorRT, TVM for runtime optimization.
 - Benchmarks & Tools: ImageNet, COCO, Roboflow, Open Images, and robustness suites like ImageNet-C.
 
----
-Updates added to provide broader coverage of real-world CV topics: robustness, deployment, compression, reproducibility, and data efficiency.
 
 
 
