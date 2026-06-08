@@ -39,6 +39,12 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Labeling: LabelImg, CVAT, LabelMe
 - Model hubs: Hugging Face Hub, PyTorch Hub
 
+### TensorFlow (brief)
+- `TensorFlow` & `tf.keras`: a full end-to-end ecosystem with a high-level Keras API for rapid prototyping and production-ready models.
+- TF Hub & pretrained modules: reusable components for transfer learning and quick model bootstrapping.
+- Serving & deployment: SavedModel format, TensorFlow Serving, TensorFlow Lite, and TensorFlow.js for edge and web deployment.
+- Tooling: TensorBoard for visualization, `tf.data` for scalable data pipelines, and the TensorFlow Object Detection API for detection workflows.
+
 ## Evaluation Metrics
 - Classification: accuracy, precision, recall, F1
 - Detection: mAP (mean Average Precision), IoU thresholds
