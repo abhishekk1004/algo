@@ -95,4 +95,64 @@ Computer Vision (CV) enables machines to understand and interpret visual data (i
 - Libraries: OpenCV for fundamental CV ops and visualization; ONNX, TensorRT, TVM for runtime optimization.
 - Benchmarks & Tools: ImageNet, COCO, Roboflow, Open Images, and robustness suites like ImageNet-C.
 
+## Practical Projects
+
+- Build an image classifier for a small custom dataset (transfer learning with a pretrained ResNet).
+- Implement a simple object detector using YOLO or SSD on a traffic dataset.
+- Create a semantic segmentation pipeline with U-Net for medical or satellite imagery.
+- Experiment with self-supervised learning (SimCLR / MoCo) on unlabeled images.
+
+## Minimal PyTorch Example
+
+```python
+import torch
+import torchvision
+from torchvision import transforms, datasets, models
+
+transform = transforms.Compose([transforms.Resize(224), transforms.ToTensor()])
+dataset = datasets.FakeData(transform=transform)
+loader = torch.utils.data.DataLoader(dataset, batch_size=8)
+
+model = models.resnet18(pretrained=True)
+model.fc = torch.nn.Linear(model.fc.in_features, 10)
+
+optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
+criterion = torch.nn.CrossEntropyLoss()
+
+model.train()
+for images, labels in loader:
+	preds = model(images)
+	loss = criterion(preds, labels)
+	optimizer.zero_grad()
+	loss.backward()
+	optimizer.step()
+```
+
+## Deployment Checklist
+
+- Convert model to an appropriate runtime (ONNX, TorchScript, TensorFlow SavedModel).
+- Benchmark latency and throughput on target hardware (CPU/GPU/Edge).
+- Add preprocessing and postprocessing in a robust, idempotent pipeline.
+- Monitor model inputs and outputs in production for drift and data errors.
+- Add versioning, tests, and canary rollouts for updates.
+
+## Common Pitfalls & Troubleshooting
+
+- Overfitting due to small datasets — use augmentation and regularization.
+- Data leakage between train/validation splits — ensure proper split by entity or time.
+- Mismatched preprocessing between training and inference (normalization, resizing).
+- Ignoring class imbalance — consider weighted loss or resampling.
+
+## Further Reading & Courses
+
+- Stanford CS231n — Convolutional Neural Networks for Visual Recognition.
+- Fast.ai Practical Deep Learning for Coders.
+- Papers: "MAE: Masked Autoencoders Are Scalable Vision Learners", "DETR: End-to-End Object Detection with Transformers".
+
+## Quick Next Steps
+
+- Try one of the Practical Projects above and iterate on evaluation.
+- Tell me which project you'd like expanded with code, configs, or datasets.
+
+
 
