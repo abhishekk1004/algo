@@ -53,8 +53,12 @@ Practical tips
 
 Important math formulas
 $$
-y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n
+\begin{aligned}
+y &= \beta_0 + \sum_{j=1}^{n} \beta_j x_j \\
+\hat{y} &= X\beta
+\end{aligned}
 $$
+
 Linear regression hypothesis:
 $$
 \hat{y} = X\beta
@@ -62,55 +66,57 @@ $$
 
 Mean squared error:
 $$
-MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+MSE = \frac{1}{n} \sum_{i=1}^{n} \left(y_i - \hat{y}_i\right)^2
 $$
 
 Mean absolute error:
 $$
-MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
+MAE = \frac{1}{n} \sum_{i=1}^{n} \left|y_i - \hat{y}_i\right|
 $$
 
 Gradient descent update:
 $$
-\vartheta := \vartheta - \alpha \nabla J(\vartheta)
+\vartheta \leftarrow \vartheta - \alpha \nabla J(\vartheta)
 $$
 
 Logistic regression:
 $$
-p(y=1|x) = \frac{1}{1 + e^{-z}}, \quad z = w^Tx + b
+p(y=1 \mid x) = \frac{1}{1 + e^{-z}}, \quad z = w^T x + b
 $$
 
 Binary cross-entropy:
 $$
-L = -\frac{1}{n} \sum_{i=1}^{n} \left[y_i \log(\hat{p}_i) + (1-y_i) \log(1-\hat{p}_i)\right]
+L = -\frac{1}{n} \sum_{i=1}^{n} \left[
+y_i \log\left(\hat{p}_i\right) + \left(1-y_i\right) \log\left(1-\hat{p}_i\right)
+\right]
 $$
 
 Softmax:
 $$
-\operatorname{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}}
+\operatorname{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{k} e^{z_j}}
 $$
 
 Precision, recall, and F1:
 $$
-Precision = \frac{TP}{TP + FP}, \quad Recall = \frac{TP}{TP + FN}
+\mathrm{Precision} = \frac{TP}{TP + FP}, \quad \mathrm{Recall} = \frac{TP}{TP + FN}
 $$
 $$
-F1 = \frac{2 \cdot Precision \cdot Recall}{Precision + Recall}
+F1 = \frac{2 \cdot \mathrm{Precision} \cdot \mathrm{Recall}}{\mathrm{Precision} + \mathrm{Recall}}
 $$
 
 Accuracy:
 $$
-Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
+\mathrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 $$
 
 Bayes' theorem:
 $$
-P(A|B) = \frac{P(B|A)P(A)}{P(B)}
+P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}
 $$
 
 Entropy:
 $$
-H(X) = -\sum_i p_i \log_2 p_i
+H(X) = -\sum_i p_i \log_2\left(p_i\right)
 $$
 
 Standardization:
@@ -171,3 +177,39 @@ flowchart LR
 Notes on images
 - Add a dataset histogram or feature importance plot to `images/ml_feature_importance.png`.
 - Add a confusion matrix or ROC curve to `images/ml_confusion_matrix.png`.
+
+## Foundations of Machine Learning
+
+The following are core foundational areas every ML practitioner should understand. Each item is brief — expand any section as needed.
+
+1. Heuristics
+  - Practical rules-of-thumb, feature choices, and model-selection shortcuts used to get working solutions quickly (e.g., baseline models, simple preprocessing, common hyperparameter ranges).
+
+2. Probability & Statistics
+  - Probability distributions, conditional probability, Bayesian reasoning, estimators, hypothesis testing, and uncertainty quantification.
+
+3. Linear Algebra
+  - Vectors, matrices, eigenvalues/eigenvectors, SVD, and operations used to represent data and linear models.
+
+4. Optimization
+  - Objective functions, gradient-based methods (SGD, Adam), convex vs non-convex optimization, and convergence diagnostics.
+
+5. Algorithms & Models
+  - Supervised (regression, classification), unsupervised (clustering, dimensionality reduction), ensemble methods, and neural architectures.
+
+6. Evaluation & Validation
+  - Metrics per task, cross-validation, train/validation/test splits, learning curves, and techniques for model comparison.
+
+7. Data Processing & Feature Engineering
+  - Cleaning, imputation, encoding, scaling, feature construction, selection, and pipelines for reproducibility.
+
+8. Software Engineering & Reproducibility
+  - Version control, experiment tracking, containerization, testing, and deployment practices for production-ready ML.
+
+9. Information Theory & Learning Theory
+  - Entropy, KL divergence, PAC learning notions, bias-variance tradeoff, and capacity/complexity control.
+
+10. Ethics, Fairness & Interpretability
+   - Bias mitigation, privacy, explainability methods, and assessing social impacts of ML systems.
+
+Use this list as a checklist for learning or auditing projects — tell me which items you want expanded into practical examples, formulas, or code snippets.
