@@ -1,11 +1,11 @@
 # Machine Learning
 
-Overview
+## Overview
 - Machine Learning (ML) is the study of algorithms that learn patterns from data to make predictions or decisions.
 - The goal is to generalize from examples instead of hard-coding rules.
 - ML workflows usually begin with a business question, then move to data collection, modeling, and evaluation.
 
-Important subtopics
+## Important Subtopics
 - Supervised Learning: labeled data (classification, regression)
 - Unsupervised Learning: no labels (clustering, dimensionality reduction)
 - Semi-supervised & Self-supervised Learning
@@ -14,7 +14,7 @@ Important subtopics
 - Bias, variance, overfitting, and underfitting
 - Imbalanced learning and anomaly detection
 
-Common algorithms
+## Common Algorithms
 - Linear Regression and Logistic Regression
 - Decision Trees, Random Forests, and Gradient Boosting
 - Support Vector Machines (SVM)
@@ -22,7 +22,7 @@ Common algorithms
 - Principal Component Analysis (PCA) for dimensionality reduction
 - Naive Bayes for simple probabilistic classification
 
-Key notes
+## Key Notes
 - Always split data into train/validation/test.
 - Feature engineering and scaling often matter more than model choice.
 - Evaluate with appropriate metrics (accuracy, precision, recall, F1, ROC-AUC).
@@ -30,7 +30,7 @@ Key notes
 - Use cross-validation when the dataset is small or noisy.
 - Check class imbalance before trusting accuracy alone.
 
-Typical ML workflow
+## Typical ML Workflow
 1. Define the problem and target variable.
 2. Collect, clean, and inspect the data.
 3. Split the dataset into train, validation, and test sets.
@@ -40,18 +40,18 @@ Typical ML workflow
 7. Evaluate the final model on the test set.
 8. Deploy, monitor, and retrain when data drifts.
 
-Metrics by task
+## Metrics by Task
 - Classification: accuracy, precision, recall, F1, ROC-AUC, confusion matrix
 - Regression: MAE, MSE, RMSE, R2
 - Clustering: silhouette score, Davies-Bouldin index
 
-Practical tips
+## Practical Tips
 - Start with a simple baseline before using complex models.
 - Remove data leakage by ensuring test information does not enter training.
 - Keep a reproducible random seed for splits and model initialization.
 - Visualize distributions, correlations, and outliers before training.
 
-Important math formulas
+## Important Math Formulas
 $$
 \begin{aligned}
 y &= \beta_0 + \sum_{j=1}^{n} \beta_j x_j \\
@@ -59,44 +59,44 @@ y &= \beta_0 + \sum_{j=1}^{n} \beta_j x_j \\
 \end{aligned}
 $$
 
-Linear regression hypothesis:
+### Linear Regression Hypothesis
 $$
 \hat{y} = X\beta
 $$
 
-Mean squared error:
+### Mean Squared Error
 $$
 MSE = \frac{1}{n} \sum_{i=1}^{n} \left(y_i - \hat{y}_i\right)^2
 $$
 
-Mean absolute error:
+### Mean Absolute Error
 $$
 MAE = \frac{1}{n} \sum_{i=1}^{n} \left|y_i - \hat{y}_i\right|
 $$
 
-Gradient descent update:
+### Gradient Descent Update
 $$
 \vartheta \leftarrow \vartheta - \alpha \nabla J(\vartheta)
 $$
 
-Logistic regression:
+### Logistic Regression
 $$
 p(y=1 \mid x) = \frac{1}{1 + e^{-z}}, \quad z = w^T x + b
 $$
 
-Binary cross-entropy:
+### Binary Cross-Entropy
 $$
 L = -\frac{1}{n} \sum_{i=1}^{n} \left[
 y_i \log\left(\hat{p}_i\right) + \left(1-y_i\right) \log\left(1-\hat{p}_i\right)
 \right]
 $$
 
-Softmax:
+### Softmax
 $$
 \operatorname{softmax}(z_i) = \frac{e^{z_i}}{\sum_{j=1}^{k} e^{z_j}}
 $$
 
-Precision, recall, and F1:
+### Precision, Recall, and F1
 $$
 \mathrm{Precision} = \frac{TP}{TP + FP}, \quad \mathrm{Recall} = \frac{TP}{TP + FN}
 $$
@@ -104,57 +104,57 @@ $$
 F1 = \frac{2 \cdot \mathrm{Precision} \cdot \mathrm{Recall}}{\mathrm{Precision} + \mathrm{Recall}}
 $$
 
-Accuracy:
+### Accuracy
 $$
 \mathrm{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
 $$
 
-Bayes' theorem:
+### Bayes' Theorem
 $$
 P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}
 $$
 
-Entropy:
+### Entropy
 $$
 H(X) = -\sum_i p_i \log_2\left(p_i\right)
 $$
 
-Standardization:
+### Standardization
 $$
 z = \frac{x - \mu}{\sigma}
 $$
 
-PCA covariance matrix:
+### PCA Covariance Matrix
 $$
 \Sigma = \frac{1}{n} X^T X
 $$
 
-Useful links for math problems and solutions
+## Useful Links for Math Problems and Solutions
 - Khan Academy: https://www.khanacademy.org/math
 - Wolfram Alpha: https://www.wolframalpha.com/
 - Math Stack Exchange: https://math.stackexchange.com/
 - Paul's Online Math Notes: https://tutorial.math.lamar.edu/
 - OpenStax Mathematics: https://openstax.org/subjects/math
 
-Quick example (classifier)
+## Quick Example: Classifier
 1. Load data (CSV).
 2. Split into train/test.
 3. Train a `RandomForestClassifier`.
 4. Evaluate accuracy and confusion matrix.
 
-Quick example (regression)
+## Quick Example: Regression
 1. Load housing or sales data.
 2. Select numeric and categorical features.
 3. Train a `LinearRegression` or gradient boosting model.
 4. Evaluate with MAE and RMSE.
 
-Mini project ideas
+## Mini Project Ideas
 - Predict house prices using regression.
 - Classify spam emails using text features.
 - Cluster customers by behavior for segmentation.
 - Detect anomalies in sensor or transaction data.
 
-Mermaid workflow
+## Mermaid Workflow
 ```mermaid
 flowchart LR
   A[Load data] --> B[Clean & preprocess]
@@ -163,7 +163,7 @@ flowchart LR
   D --> E[Evaluate]
 ```
 
-Mermaid training loop
+## Mermaid Training Loop
 ```mermaid
 flowchart LR
   A[Dataset] --> B[Feature engineering]
@@ -174,42 +174,42 @@ flowchart LR
   E -- Yes --> F[Test and deploy]
 ```
 
-Notes on images
+## Notes on Images
 - Add a dataset histogram or feature importance plot to `images/ml_feature_importance.png`.
 - Add a confusion matrix or ROC curve to `images/ml_confusion_matrix.png`.
 
 ## Foundations of Machine Learning
 
-The following are core foundational areas every ML practitioner should understand. Each item is brief — expand any section as needed.
+The following are core foundational areas every ML practitioner should understand. Each item is brief. Expand any section as needed.
 
 1. Heuristics
-  - Practical rules-of-thumb, feature choices, and model-selection shortcuts used to get working solutions quickly (e.g., baseline models, simple preprocessing, common hyperparameter ranges).
+   - Practical rules-of-thumb, feature choices, and model-selection shortcuts used to get working solutions quickly (e.g., baseline models, simple preprocessing, common hyperparameter ranges).
 
 2. Probability & Statistics
-  - Probability distributions, conditional probability, Bayesian reasoning, estimators, hypothesis testing, and uncertainty quantification.
+   - Probability distributions, conditional probability, Bayesian reasoning, estimators, hypothesis testing, and uncertainty quantification.
 
 3. Linear Algebra
-  - Vectors, matrices, eigenvalues/eigenvectors, SVD, and operations used to represent data and linear models.
+   - Vectors, matrices, eigenvalues/eigenvectors, SVD, and operations used to represent data and linear models.
 
 4. Optimization
-  - Objective functions, gradient-based methods (SGD, Adam), convex vs non-convex optimization, and convergence diagnostics.
+   - Objective functions, gradient-based methods (SGD, Adam), convex vs non-convex optimization, and convergence diagnostics.
 
 5. Algorithms & Models
-  - Supervised (regression, classification), unsupervised (clustering, dimensionality reduction), ensemble methods, and neural architectures.
+   - Supervised (regression, classification), unsupervised (clustering, dimensionality reduction), ensemble methods, and neural architectures.
 
 6. Evaluation & Validation
-  - Metrics per task, cross-validation, train/validation/test splits, learning curves, and techniques for model comparison.
+   - Metrics per task, cross-validation, train/validation/test splits, learning curves, and techniques for model comparison.
 
 7. Data Processing & Feature Engineering
-  - Cleaning, imputation, encoding, scaling, feature construction, selection, and pipelines for reproducibility.
+   - Cleaning, imputation, encoding, scaling, feature construction, selection, and pipelines for reproducibility.
 
 8. Software Engineering & Reproducibility
-  - Version control, experiment tracking, containerization, testing, and deployment practices for production-ready ML.
+   - Version control, experiment tracking, containerization, testing, and deployment practices for production-ready ML.
 
 9. Information Theory & Learning Theory
-  - Entropy, KL divergence, PAC learning notions, bias-variance tradeoff, and capacity/complexity control.
+   - Entropy, KL divergence, PAC learning notions, bias-variance tradeoff, and capacity/complexity control.
 
 10. Ethics, Fairness & Interpretability
-   - Bias mitigation, privacy, explainability methods, and assessing social impacts of ML systems.
+    - Bias mitigation, privacy, explainability methods, and assessing social impacts of ML systems.
 
 Use this list as a checklist for learning or auditing projects — tell me which items you want expanded into practical examples, formulas, or code snippets.
