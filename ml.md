@@ -1,34 +1,58 @@
 # Machine Learning
 
 ## Overview
-- Machine Learning (ML) is the study of algorithms that learn patterns from data to make predictions or decisions.
-- The goal is to generalize from examples instead of hard-coding rules.
-- ML workflows usually begin with a business question, then move to data collection, modeling, and evaluation.
+Machine Learning (ML) studies algorithms that learn patterns from data to make predictions or decisions.
+The goal is to generalize from examples instead of hard-coding rules.
+Most ML workflows start with a business question and then move through data collection, modeling, and evaluation.
 
 ## Important Subtopics
-- Supervised Learning: labeled data (classification, regression)
-- Unsupervised Learning: no labels (clustering, dimensionality reduction)
-- Semi-supervised & Self-supervised Learning
-- Model selection, cross-validation, and generalization
-- Feature engineering, feature selection, and data preprocessing
-- Bias, variance, overfitting, and underfitting
-- Imbalanced learning and anomaly detection
+### Supervised Learning
+Uses labeled data for tasks such as classification and regression.
+
+### Unsupervised Learning
+Finds structure in unlabeled data through clustering and dimensionality reduction.
+
+### Semi-Supervised and Self-Supervised Learning
+Uses a mix of labeled and unlabeled data, or creates training signals from the data itself.
+
+### Model Selection and Generalization
+Focuses on cross-validation, comparing models, and measuring how well they generalize.
+
+### Feature Engineering and Preprocessing
+Covers feature creation, feature selection, cleaning, and scaling.
+
+### Bias, Variance, Overfitting, and Underfitting
+Describes the tradeoff between model simplicity, flexibility, and prediction error.
+
+### Imbalanced Learning and Anomaly Detection
+Handles rare classes and detects unusual observations.
 
 ## Common Algorithms
-- Linear Regression and Logistic Regression
-- Decision Trees, Random Forests, and Gradient Boosting
-- Support Vector Machines (SVM)
-- K-Means and DBSCAN for clustering
-- Principal Component Analysis (PCA) for dimensionality reduction
-- Naive Bayes for simple probabilistic classification
+### Linear and Logistic Regression
+Used for prediction with continuous outputs and binary classification.
+
+### Decision Trees, Random Forests, and Gradient Boosting
+Tree-based methods that combine interpretability with strong predictive performance.
+
+### Support Vector Machines
+Margin-based classifiers that work well on smaller, well-separated datasets.
+
+### K-Means and DBSCAN
+Clustering methods for grouping similar points and finding dense regions.
+
+### Principal Component Analysis
+Reduces dimensionality by projecting data onto directions of maximum variance.
+
+### Naive Bayes
+A simple probabilistic classifier that works well for text and categorical features.
 
 ## Key Notes
-- Always split data into train/validation/test.
-- Feature engineering and scaling often matter more than model choice.
-- Evaluate with appropriate metrics (accuracy, precision, recall, F1, ROC-AUC).
-- Standardize or normalize features when using distance-based or gradient-based methods.
-- Use cross-validation when the dataset is small or noisy.
-- Check class imbalance before trusting accuracy alone.
+Always split data into train, validation, and test sets.
+Feature engineering and scaling often matter more than model choice.
+Use metrics that match the task, such as accuracy, precision, recall, F1, and ROC-AUC.
+Standardize or normalize features when using distance-based or gradient-based methods.
+Use cross-validation when the dataset is small or noisy.
+Check class imbalance before trusting accuracy alone.
 
 ## Typical ML Workflow
 1. Define the problem and target variable.
@@ -41,15 +65,20 @@
 8. Deploy, monitor, and retrain when data drifts.
 
 ## Metrics by Task
-- Classification: accuracy, precision, recall, F1, ROC-AUC, confusion matrix
-- Regression: MAE, MSE, RMSE, R2
-- Clustering: silhouette score, Davies-Bouldin index
+### Classification
+Accuracy, precision, recall, F1, ROC-AUC, and confusion matrix.
+
+### Regression
+MAE, MSE, RMSE, and R2.
+
+### Clustering
+Silhouette score and Davies-Bouldin index.
 
 ## Practical Tips
-- Start with a simple baseline before using complex models.
-- Remove data leakage by ensuring test information does not enter training.
-- Keep a reproducible random seed for splits and model initialization.
-- Visualize distributions, correlations, and outliers before training.
+Start with a simple baseline before using complex models.
+Remove data leakage by keeping test information out of training.
+Keep a reproducible random seed for data splits and model initialization.
+Visualize distributions, correlations, and outliers before training.
 
 ## Important Math Formulas
 $$
@@ -130,29 +159,38 @@ $$
 $$
 
 ## Useful Links for Math Problems and Solutions
-- Khan Academy: https://www.khanacademy.org/math
-- Wolfram Alpha: https://www.wolframalpha.com/
-- Math Stack Exchange: https://math.stackexchange.com/
-- Paul's Online Math Notes: https://tutorial.math.lamar.edu/
-- OpenStax Mathematics: https://openstax.org/subjects/math
+### Khan Academy
+https://www.khanacademy.org/math
+
+### Wolfram Alpha
+https://www.wolframalpha.com/
+
+### Math Stack Exchange
+https://math.stackexchange.com/
+
+### Paul's Online Math Notes
+https://tutorial.math.lamar.edu/
+
+### OpenStax Mathematics
+https://openstax.org/subjects/math
 
 ## Quick Example: Classifier
-1. Load data (CSV).
-2. Split into train/test.
-3. Train a `RandomForestClassifier`.
-4. Evaluate accuracy and confusion matrix.
+Load the data from a CSV file.
+Split the data into train and test sets.
+Train a RandomForestClassifier.
+Evaluate accuracy and the confusion matrix.
 
 ## Quick Example: Regression
-1. Load housing or sales data.
-2. Select numeric and categorical features.
-3. Train a `LinearRegression` or gradient boosting model.
-4. Evaluate with MAE and RMSE.
+Load housing or sales data.
+Select numeric and categorical features.
+Train a LinearRegression or gradient boosting model.
+Evaluate with MAE and RMSE.
 
 ## Mini Project Ideas
-- Predict house prices using regression.
-- Classify spam emails using text features.
-- Cluster customers by behavior for segmentation.
-- Detect anomalies in sensor or transaction data.
+Predict house prices using regression.
+Classify spam emails using text features.
+Cluster customers by behavior for segmentation.
+Detect anomalies in sensor or transaction data.
 
 ## Mermaid Workflow
 ```mermaid
@@ -175,8 +213,8 @@ flowchart LR
 ```
 
 ## Notes on Images
-- Add a dataset histogram or feature importance plot to `images/ml_feature_importance.png`.
-- Add a confusion matrix or ROC curve to `images/ml_confusion_matrix.png`.
+Add a dataset histogram or feature importance plot to images/ml_feature_importance.png.
+Add a confusion matrix or ROC curve to images/ml_confusion_matrix.png.
 
 ## Foundations of Machine Learning
 
