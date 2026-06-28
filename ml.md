@@ -180,36 +180,36 @@ flowchart LR
 
 ## Foundations of Machine Learning
 
-The following are core foundational areas every ML practitioner should understand. Each item is brief. Expand any section as needed.
+Each item below is kept short and uses the same simple heading style as the formula section.
 
-1. Heuristics
-   - Practical rules-of-thumb, feature choices, and model-selection shortcuts used to get working solutions quickly (e.g., baseline models, simple preprocessing, common hyperparameter ranges).
+### Heuristics
+Practical rules of thumb, feature choices, and model-selection shortcuts for getting working solutions quickly.
 
-2. Probability & Statistics
-   - Probability distributions, conditional probability, Bayesian reasoning, estimators, hypothesis testing, and uncertainty quantification.
+### Probability & Statistics
+Probability distributions, conditional probability, Bayesian reasoning, estimators, hypothesis testing, and uncertainty quantification.
 
-3. Linear Algebra
-   - Vectors, matrices, eigenvalues/eigenvectors, SVD, and operations used to represent data and linear models.
+### Linear Algebra
+Vectors, matrices, eigenvalues, eigenvectors, SVD, and the matrix operations used in data and linear models.
 
-4. Optimization
-   - Objective functions, gradient-based methods (SGD, Adam), convex vs non-convex optimization, and convergence diagnostics.
+### Optimization
+Objective functions, gradient-based methods like SGD and Adam, convex vs non-convex optimization, and convergence checks.
 
-5. Algorithms & Models
-   - Supervised (regression, classification), unsupervised (clustering, dimensionality reduction), ensemble methods, and neural architectures.
+### Algorithms & Models
+Supervised learning, unsupervised learning, ensemble methods, and neural architectures.
 
-6. Evaluation & Validation
-   - Metrics per task, cross-validation, train/validation/test splits, learning curves, and techniques for model comparison.
+### Evaluation & Validation
+Metrics, cross-validation, train/validation/test splits, learning curves, and model comparison.
 
-7. Data Processing & Feature Engineering
-   - Cleaning, imputation, encoding, scaling, feature construction, selection, and pipelines for reproducibility.
+### Data Processing & Feature Engineering
+Cleaning, imputation, encoding, scaling, feature construction, selection, and reproducible pipelines.
 
-8. Software Engineering & Reproducibility
-   - Version control, experiment tracking, containerization, testing, and deployment practices for production-ready ML.
+### Software Engineering & Reproducibility
+Version control, experiment tracking, containerization, testing, and deployment for production ML.
 
-9. Information Theory & Learning Theory
-   - Entropy, KL divergence, PAC learning notions, bias-variance tradeoff, and capacity/complexity control.
+### Information Theory & Learning Theory
+Entropy, KL divergence, PAC learning ideas, bias-variance tradeoff, and capacity control.
 
-10. Ethics, Fairness & Interpretability
-    - Bias mitigation, privacy, explainability methods, and assessing social impacts of ML systems.
+### Ethics, Fairness & Interpretability
+Bias mitigation, privacy, explainability methods, and the social impact of ML systems.
 
 Use this list as a checklist for learning or auditing projects — tell me which items you want expanded into practical examples, formulas, or code snippets.
