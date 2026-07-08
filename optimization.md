@@ -67,3 +67,16 @@ In practice, the chosen algorithm depends on both solution quality and efficienc
 - **Gurobi / CPLEX** — commercial solvers
 - **OR-Tools** (Google) — constraint programming
 - **Pyomo** — optimization modeling language
+
+## Quick Example: Route Planning
+
+Imagine a delivery app that needs the fastest route between two locations.
+The app defines an objective function for travel time, adds constraints such as traffic and road closures, then searches for the path with the lowest cost.
+
+This is the same optimization idea used in scheduling, resource allocation, and model training: define a goal, respect constraints, and search for the best solution.
+
+## Website Notes
+
+- Add a simple chart or diagram showing objective, constraints, and optimal solution.
+- Include a short animation or step-by-step flow for visitors who prefer visual explanations.
+- Pair this page with a real-world example so the concept feels practical right away.
