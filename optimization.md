@@ -41,6 +41,17 @@ Optimization is the process of making a system, design, or decision as effective
 | Particle Swarm Optimization | Metaheuristic | Continuous optimization |
 | Branch and Bound | Discrete | Integer programming |
 
+## Complexity
+
+Optimization problems can vary a lot in complexity. Some, like linear programming, can often be solved efficiently with well-known algorithms, while others, like integer programming and many non-convex problems, can become very expensive as the input size grows.
+
+- **Time complexity**: How the runtime grows with the number of variables, constraints, and dimensions
+- **Space complexity**: How much memory is needed to store data, gradients, matrices, or search states
+- **Problem structure**: Convex problems are usually easier to solve than non-convex ones
+- **Scalability**: Large datasets and high-dimensional spaces can make even simple methods slow
+
+In practice, the chosen algorithm depends on both solution quality and efficiency. A fast approximate method may be better than an exact method when the problem is large or too complex to solve optimally.
+
 ## Applications
 
 - **Machine Learning**: Training models (loss minimization)
