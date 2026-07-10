@@ -117,3 +117,62 @@ This shows diminishing returns as $n$ increases unless $p$ is very close to 1.
 - Add a simple chart or diagram showing objective, constraints, and optimal solution.
 - Include a short animation or step-by-step flow for visitors who prefer visual explanations.
 - Pair this page with a real-world example so the concept feels practical right away.
+
+## Practical Workflow (From Idea to Solution)
+
+1. Define the objective clearly (minimize cost, maximize accuracy, reduce time, etc.).
+2. List constraints (budget, capacity, latency, legal limits, safety rules).
+3. Classify the problem:
+   - Continuous vs discrete
+   - Convex vs non-convex
+   - Deterministic vs stochastic
+4. Choose a baseline solver first (simple and reliable).
+5. Measure solution quality and runtime.
+6. Tune hyperparameters or switch algorithms if needed.
+7. Validate robustness on edge cases and realistic inputs.
+
+## How to Choose an Optimization Method
+
+- If gradients are available and smooth: start with gradient-based methods (GD, Adam, L-BFGS).
+- If convex with constraints: use convex solvers (interior-point, CVX frameworks).
+- If integer/discrete variables dominate: use MILP/CP (branch-and-bound, OR-Tools).
+- If objective is black-box or noisy: use Bayesian optimization or metaheuristics.
+- If scale is massive: use stochastic/mini-batch methods and distributed optimization.
+
+## Mini Python Example (Constrained Optimization)
+
+```python
+import numpy as np
+from scipy.optimize import minimize
+
+# Minimize f(x, y) = (x-1)^2 + (y-2)^2
+def objective(v):
+	x, y = v
+	return (x - 1) ** 2 + (y - 2) ** 2
+
+# Constraint: x + y >= 2  ->  x + y - 2 >= 0
+constraints = [
+	{"type": "ineq", "fun": lambda v: v[0] + v[1] - 2}
+]
+
+# Bounds: x, y in [0, 3]
+bounds = [(0, 3), (0, 3)]
+
+start = np.array([0.0, 0.0])
+result = minimize(objective, start, method="SLSQP", bounds=bounds, constraints=constraints)
+
+print("Optimal point:", result.x)
+print("Objective value:", result.fun)
+print("Converged:", result.success)
+```
+
+Expected behavior: the optimizer moves toward $(1, 2)$ while respecting bounds and the inequality constraint.
+
+## Common Mistakes
+
+- Optimizing the wrong objective (proxy does not match business goal).
+- Ignoring constraints until late in the pipeline.
+- Comparing algorithms without fixed seeds or consistent hardware settings.
+- Reporting only best-case result instead of average and variance.
+- Assuming more cores always improves performance without benchmarking.
+
